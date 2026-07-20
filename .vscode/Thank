@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #eef2f3 !important;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Sent! - Ramia Ismail</title>
+    <!-- Links to your existing stylesheet so it matches your brand layout -->
+    <link rel="stylesheet" href="assets/css/main.css" /> 
+</head>
+<body style="background-color: #eef2f3 !important; text-align: center; padding: 100px 20px;">
+
+    <!-- Clean, centered success content block -->
+    <div style="max-width: 600px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <i class="icon solid fa-check-circle" style="font-size: 3rem; color: #1e3c72; display: block; margin-bottom: 20px;"></i>
+        <h1 style="color: #1e252d !important; margin-bottom: 10px;">Thank You!</h1>
+        <p style="color: #475569 !important; font-size: 1.1rem; margin-bottom: 30px;">Your message has been sent successfully. I will review your data inquiry and get back to you shortly.</p>
+        
+        <!-- Redirects them safely back to your home page portfolio layout -->
+        <a href="index.html" class="button">Back to Home</a>
+    </div>
+
+</body>
+</html>

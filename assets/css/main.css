@@ -6003,3 +6003,46 @@ input[type="button"]:hover,
   }
 }
 
+/* ==========================================================================
+   HTML5 UP MASSIVELY - CUSTOM STACK FOR 2-ITEM SERVICES ROW
+   ========================================================================== */
+
+/* 1. Desktop Layout Support */
+#main .services-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important; /* Centers the two desktop cards nicely */
+  gap: 30px !important;
+}
+
+#main .services-row article {
+  flex: 1 !important;
+  max-width: 45% !important; /* Keeps the two items perfectly proportioned on desktop */
+}
+
+/* 2. Mobile Layout Support (Forces a clean vertical stack instead of a swipe) */
+@media screen and (max-width: 768px) {
+  #main .services-row {
+    display: flex !important;
+    flex-direction: column !important; /* Stacks the 2 items vertically on phones */
+    overflow-x: hidden !important;     /* Disables horizontal swipe for this section */
+    scroll-snap-type: none !important;
+    gap: 25px !important;
+  }
+
+  #main .services-row article {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important; /* Uses the full clean width of the mobile view */
+    padding: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  /* Keeps your custom small-media image frames perfectly safe */
+  #main .services-row article .image.small-media img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}

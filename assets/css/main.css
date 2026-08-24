@@ -5934,4 +5934,26 @@ input[type="button"]:hover,
     border-color: #8e9ecb !important;
 }
 
+/* ========================================================================== 
+--- make the first intro articales move right and left --- 
+==========================================================================*/
+
+
+@media screen and (max-width: 768px) {
+  .article-row {
+    display: flex !important;
+    flex-direction: row !important; /* Keep them in a line */
+    overflow-x: auto;              /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth snapping as you swipe */
+    gap: 15px;
+    padding-bottom: 15px;          /* Space for the scroll bar */
+    -webkit-overflow-scrolling: touch; /* Smooth momentum scrolling on iPhones */
+  }
+
+  .article-row article {
+    flex: 0 0 75%;                 /* Shows one card and a chunk of the next one */
+    scroll-snap-align: start;       /* Snaps perfectly in place */
+    box-sizing: border-box;
+  }
+}
 

@@ -6046,3 +6046,28 @@ input[type="button"]:hover,
     object-fit: contain !important;
   }
 }
+
+/* ==========================================================================
+   MASSIVELY IMAGE REPAIR - PREVENT CENTER MOBILE CROPPING
+   ========================================================================== */
+
+/* Safely targets both the Portfolio and Services rows on mobile */
+@media screen and (max-width: 768px) {
+  
+  #main .article-row article .image.fit,
+  #main .services-row article .image.fit {
+    display: block !important;     /* Disables Massively's default flex/grid image alignment */
+    width: 100% !important;        /* Restricts the frame to the card layout width */
+    height: auto !important;       /* Lets the frame size adapt natively */
+    overflow: visible !important;  /* Ensures no edges get sliced away */
+  }
+
+  #main .article-row article .image.fit img,
+  #main .services-row article .image.fit img {
+    position: static !important;   /* Disables absolute center-cropping layout rules */
+    width: 100% !important;        /* Makes the graphic scale smoothly to match the container */
+    height: auto !important;       /* Forces the proportions to look completely natural */
+    object-fit: contain !important;/* Safeguards the layout against cropping anomalies */
+    transform: none !important;    /* Clears any center-zoom offsets */
+  }
+}

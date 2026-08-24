@@ -5986,11 +5986,20 @@ input[type="button"]:hover,
     word-wrap: break-word !important;
   }
 
-  /* Ensure portfolio images scale nicely inside the mobile card bounds */
-  #main .article-row article .image img {
+  /* TARGETS ONLY IMAGES INSIDE THE PORTFOLIO CAROUSEL CONTAINER */
+  #main .article-row article .image.small-media img,
+  #main .article-row article .image.medium-media img {
     width: 100% !important;
-    height: 180px !important;
-    object-fit: cover !important;
+    height: auto !important;        /* Keeps the picture proportions natural */
+    object-fit: contain !important; /* Ensures no cropping happens */
+  }
+
+  /* Adjusts frame sizes slightly for mobile screens so they fit beautifully */
+  #main .article-row article .small-media {
+    max-width: 120px !important;    
+  }
+  #main .article-row article .medium-media {
+    max-width: 130px !important;
   }
 }
 

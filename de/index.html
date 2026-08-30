@@ -24,8 +24,9 @@
 					<div id="intro">
 						<h1>RAMIA ISMAIL</h1>
 						<h2>Datenanalystin</h2>
-						<p>Erhebung, Bereinigung, Analyse und Visualisierung von Daten<br>
-							zur Unterstützung von Entscheidungsprozessen und Aufdeckung fundierter Erkenntnisse.</p>
+						<p id="typing-container">
+							<b><span id="typing-text"></span></b>
+						</p>
 
 
 						<ul class="actions">
@@ -397,5 +398,26 @@
 			<script src="../assets/js/main.js"></script>
 			<script data-goatcounter="https://ramanalyst.goatcounter.com/count"
 			async src="//gc.zgo.at/count.js"></script>
+			<script>
+    const text = "Erhebung, Bereinigung, Analyse und Visualisierung von Daten\nzur Unterstützung von Entscheidungsprozessen und Aufdeckung fundierter Erkenntnisse.";
+    const element = document.getElementById("typing-text");
+    let index = 0;
+    const speed = 50; // Typing speed in milliseconds (lower is faster)
+
+    function typeWriter() {
+        if (index < text.length) {
+            if (text.charAt(index) === "\n") {
+                element.innerHTML += "<br>"; // Converts the \n line break to HTML
+            } else {
+                element.innerHTML += text.charAt(index);
+            }
+            index++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    // Start the animation when the page loads
+    window.onload = typeWriter;
+</script>
 	</body>
 </html>

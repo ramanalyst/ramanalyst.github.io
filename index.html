@@ -27,8 +27,9 @@
 					<div id="intro">
 						<h1>RAMIA ISMAIL</h1>
 						<h2>Data Analyst</h2>
-						<p>Collect, manipulate, analyze, and present data<br>
-							to support decision-making and uncover actionable insights.</p>
+						<p id="typing-container">
+							<b><span id="typing-text"></span></b>
+						</p>
 						<ul class="actions">
 							<li>
 							    <a href="#contact-section" class="button scrolly text-and-arrow">
@@ -397,6 +398,28 @@
 			<script src="assets/js/main.js"></script>
 			<script data-goatcounter="https://ramanalyst.goatcounter.com/count"
 			async src="//gc.zgo.at/count.js"></script>
+			<script>
+			const text = "Collect, manipulate, analyze, and present data to support decision-making and uncover actionable insights.";
+			const element = document.getElementById("typing-text");
+            let index = 0;
+            const speed = 50; // Typing speed in milliseconds (lower is faster)
+
+            function typeWriter() {
+				if (index < text.length) {
+					if (text.charAt(index) === "\n") {
+						element.innerHTML += "<br>"; // Converts the \n line break to HTML// 
+						} else {
+							element.innerHTML += text.charAt(index);
+						}
+							index++;
+							setTimeout(typeWriter, speed);
+						}
+					}
+			
+
+                    // Start the animation when the page loads
+                    window.onload = typeWriter;
+					</script>
 
 	</body>
 </html>
